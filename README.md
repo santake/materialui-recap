@@ -1,1 +1,1 @@
-# create-react-app Minimal Template
+# Recap / examples of Material-UI components
