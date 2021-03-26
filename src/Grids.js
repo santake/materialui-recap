@@ -21,7 +21,7 @@ export const Grids = (props) => {
   return (
     <div className={classes.root}>
       <Container maxWidth={'md'} mt={3} mb={4}>
-        <Typography variant={'h5'}>Grid</Typography>
+        <Typography variant={'h4'}>Grid</Typography>
         <Grid container spacing={1}>
           <Grid item xs={6}>
             <Paper className={classes.paper}>

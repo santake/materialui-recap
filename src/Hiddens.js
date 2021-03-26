@@ -21,7 +21,7 @@ export const Hiddens = (props) => {
   return (
     <div className={classes.root}>
       <Container maxWidth={'md'} m={'auto'}>
-      <Typography variant={'h5'}>Hidden tags</Typography>
+      <Typography variant={'h4'}>Hidden tags</Typography>
       <Typography variant={'subtitle1'} gutterBottom>Current width: {width}</Typography>
       <Grid container spacing={3}>
         <Hidden xsUp>

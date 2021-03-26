@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container,  makeStyles,} from "@material-ui/core";
+import {Container, Drawer, makeStyles,} from "@material-ui/core";
 
 import {MenuBar} from './MenuBar';
 import {TitlebarGridList} from "./GridList";
@@ -13,6 +13,10 @@ import {SelectItems} from "./form/SelectItems";
 import {Sliders} from './form/Sliders';
 import {Switches} from './form/Switches';
 import {TextFieldVariation} from "./form/TextFieldVariation";
+import {TransferList} from "./form/TransferList";
+import {Drawers} from "./Drawers";
+import {Menus} from "./Menus";
+import {Steppers} from "./Steppers";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -49,7 +53,12 @@ export default () => {
       <Sliders/>
       <Switches/>
       <TextFieldVariation/>
+      <TransferList/>
 
+      <Drawers/>
+      <Menus/>
+
+      <Steppers/>
     </>
   );
 }
