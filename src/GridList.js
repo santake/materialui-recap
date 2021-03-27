@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Container,
   GridList,
   GridListTile,
   GridListTileBar,
@@ -39,9 +40,8 @@ const useStyles = makeStyles((theme) => ({
 export const TitlebarGridList = () => {
   const classes = useStyles();
   return (
-    <>
+    <Container maxWidth={'md'} mt={10}>
       <Typography variant={'h5'}>Grid List</Typography>
-
       <div className={classes.root}>
         <GridList cellHeight={180} className={classes.gridList}>
           <GridListTile key={'Subheader'} cols={2} style={{height: 'auto'}}>
@@ -63,7 +63,7 @@ export const TitlebarGridList = () => {
           ))}
         </GridList>
       </div>
-    </>
+    </Container>
   );
 }
 

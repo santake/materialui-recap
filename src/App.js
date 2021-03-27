@@ -1,65 +1,35 @@
 import React from 'react';
-import {Container, Drawer, makeStyles,} from "@material-ui/core";
+import {Route, Switch} from 'wouter';
 
 import {MenuBar} from './MenuBar';
-import {TitlebarGridList} from "./GridList";
-import {Hiddens} from "./Hiddens";
-import {Grids} from "./Grids";
-import {Flexbox} from "./Flexbox";
-import {Buttons} from "./form/Buttons";
-import {CheckboxRadioButton} from "./form/CheckboxRadioButton";
-import {DateTime} from "./form/DateTime";
-import {SelectItems} from "./form/SelectItems";
-import {Sliders} from './form/Sliders';
-import {Switches} from './form/Switches';
-import {TextFieldVariation} from "./form/TextFieldVariation";
-import {TransferList} from "./form/TransferList";
-import {Drawers} from "./Drawers";
-import {Menus} from "./Menus";
-import {Steppers} from "./Steppers";
+import {Page1} from "./Page1";
+import {Page2} from "./Page2";
+import {Page3} from "./Page3";
 
 
-const useStyles = makeStyles((theme) => ({
-  menuButton: {
-    marginRight: theme.spacing(2)
-  },
-  title: {
-    flexGrow: 1
-  }
-}));
+// NOTE: 'wouter' is used for routing. not React-router-dom!
 
 
 export default () => {
-  const classes = useStyles();
-
   return (
     <>
       <MenuBar/>
-
-      <Grids/>
-
-      <Container maxWidth={'md'} mt={10}>
-        <TitlebarGridList/>
-      </Container>
-
-      <Hiddens/>
-      <Flexbox/>
-
-      {/* Forms */}
-      <Buttons/>
-      <CheckboxRadioButton/>
-      <DateTime/>
-      <SelectItems/>
-      <Sliders/>
-      <Switches/>
-      <TextFieldVariation/>
-      <TransferList/>
-
-      <Drawers/>
-      <Menus/>
-
-      <Steppers/>
+      <Switch>
+        <Route path='/'>
+          <Page1/>
+        </Route>
+        <Route path='/p1'>
+          <Page1/>
+        </Route>
+        <Route path='/p2'>
+          <Page2/>
+        </Route>
+        <Route path='/p3'>
+          <Page3/>
+        </Route>
+      </Switch>
     </>
+
   );
 }
 

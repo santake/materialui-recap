@@ -38,7 +38,7 @@ export const Drawers = () => {
 
   const toggleDrawer = (anchor, open) => (ev) => {
     if (ev.type === 'keydown'
-      && (ev.key == 'Tab' || ev.key === 'Shift')) {
+      && (ev.key === 'Tab' || ev.key === 'Shift')) {
       return;
     }
     setState({...state, [anchor]: open});
