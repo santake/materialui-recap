@@ -4,7 +4,6 @@ import {Container, Grid, makeStyles, Paper, Typography} from "@material-ui/core"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: 10,
     flexGrow: 1,
   },
   paper: {

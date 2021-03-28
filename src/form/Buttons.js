@@ -5,7 +5,7 @@ import {Add, Apple as AppleIcon} from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '2em',
+    //marginTop: '2em',
   },
   box: {
     margin: 2,

@@ -71,7 +71,16 @@ export const MenuBar = () => {
               <ListItemAvatar>
                 <Avatar><WebAsset/></Avatar>
               </ListItemAvatar>
-              <ListItemText primary={'Page #3'} secondary={'Various useful components'}/>
+              <ListItemText primary={'Page #3'} secondary={'Various useful components (1)'}/>
+            </ListItem>
+          </Link>
+
+          <Link href={'/p4'}>
+            <ListItem button key={'page4'}>
+              <ListItemAvatar>
+                <Avatar><WebAsset/></Avatar>
+              </ListItemAvatar>
+              <ListItemText primary={'Page #4'} secondary={'Various useful components (2)'}/>
             </ListItem>
           </Link>
         </List>
@@ -80,7 +89,7 @@ export const MenuBar = () => {
   };
 
   return (
-    <AppBar position={'static'} color={'transparent'}>
+    <AppBar position={'sticky'} color={'primary'} elevation={0}>
       <Toolbar variant={'dense'}>
         <IconButton edge={'start'}
                     className={classes.menuButton}
