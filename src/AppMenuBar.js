@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export const MenuBar = () => {
+export const AppMenuBar = () => {
   const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -83,6 +83,16 @@ export const MenuBar = () => {
               <ListItemText primary={'Page #4'} secondary={'Various useful components (2)'}/>
             </ListItem>
           </Link>
+
+          <Link href={'/p5'}>
+            <ListItem button key={'page5'}>
+              <ListItemAvatar>
+                <Avatar><WebAsset/></Avatar>
+              </ListItemAvatar>
+              <ListItemText primary={'Page #5'} secondary={'Tab examples'}/>
+            </ListItem>
+          </Link>
+
         </List>
       </div>
     );

@@ -3,16 +3,17 @@ import React from 'react';
 // NOTE: 'wouter' is used for routing. not React-router-dom!
 import {Route, Switch} from 'wouter';
 
-import {MenuBar} from './MenuBar';
+import {AppMenuBar} from './AppMenuBar';
 import {Page1} from "./Page1";
 import {Page2} from "./Page2";
 import {Page3} from "./Page3";
 import {Page4} from './Page4';
+import {Page5} from './Page5';
 
 export default () => {
   return (
     <>
-      <MenuBar/>
+      <AppMenuBar/>
       <div>
         <Switch>
           <Route path='/'>
@@ -29,6 +30,9 @@ export default () => {
           </Route>
           <Route path='/p4'>
             <Page4/>
+          </Route>
+          <Route path='/p5'>
+            <Page5/>
           </Route>
         </Switch>
       </div>

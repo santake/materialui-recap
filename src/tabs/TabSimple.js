@@ -4,9 +4,11 @@ import {
   Tabs, Tab,
   AppBar, Box, Container, makeStyles, Typography} from "@material-ui/core";
 
+import {TabPanel} from './TabPanel';
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
-
     marginTop: '2em',
   },
 }));
@@ -19,7 +21,7 @@ const allyProps = (index) => {
 };
 
 
-export const TabExamples = () => {
+export const TabSimple = () => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
   const handleChange = (ev, newValue) => setValue(newValue);
@@ -28,6 +30,8 @@ export const TabExamples = () => {
     <div className={classes.root}>
       <Container maxWidth={'md'}>
         <Typography variant={'h4'}>Tabs</Typography>
+
+        <Typography variant={'h5'}>Very simple</Typography>
         <AppBar position={'relative'} color={'secondary'}>
           <Tabs value={value}
                 onChange={handleChange}
@@ -53,32 +57,4 @@ export const TabExamples = () => {
   );
 };
 
-
-
-const TabPanel = (props) => {
-  const {
-    children,
-    value,
-    index,
-    ...other
-  } = props;
-  return (
-    <div role={'tabpanel'}
-         hidden={value !== index}
-         id={`simple-tabpanel-${index}`}
-         aria-labelledby={`simple-tab-${index}`}
-         {...other}>
-      {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired
-}
 

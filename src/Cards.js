@@ -15,6 +15,7 @@ import {
 } from "@material-ui/core";
 import {ExpandMore, Favorite, MoreVert, PlayArrow, Share, SkipNext, SkipPrevious} from "@material-ui/icons";
 import clsx from "clsx";
+import {StylishButton} from "./CustomComponents";
 
 
 const BASE_URL = 'https://material-ui.com';
@@ -71,8 +72,6 @@ const useStyles = makeStyles((theme) => ({
   mPlayIcon: {
     height: 38, width:38
   }
-
-
 }));
 
 export const Cards = () => {
@@ -94,7 +93,8 @@ export const Cards = () => {
                 <Typography variant={'subtitle1'}>Default Card</Typography>
               </CardContent>
               <CardActions>
-                <Button variant={'contained'} color={'primary'}>Detail</Button>
+                {/*custom button*/}
+                <StylishButton variant={'contained'} color={'primary'}>Detail</StylishButton>
               </CardActions>
             </Card>
           </Grid>
