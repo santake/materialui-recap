@@ -1,11 +1,13 @@
 import React from 'react';
+import {Divider} from "@material-ui/core";
+
 
 import {TabSimple} from "./tabs/TabSimple";
 import {TabScrollable} from "./tabs/TabScrollable";
 import {TabCustomized} from "./tabs/TabCustomized";
 import {TabVertical} from "./tabs/TabVertical";
 import {Progresses} from "./progress/Progresses";
-import {Divider} from "@material-ui/core";
+import {Backdrops} from "./Backdrops";
 
 export const Page5 = () => {
   return (
@@ -17,6 +19,8 @@ export const Page5 = () => {
 
       <Divider/>
       <Progresses/>
+      <Backdrops/>
+
     </>
   );
 }

@@ -17,7 +17,7 @@ import {ListAlt, Menu as MenuIcon, WebAsset} from "@material-ui/icons"
 const useStyles = makeStyles((theme) => ({
   appmenubar: {
     // Increase the Vertical index to the top
-    zIndex: 9000
+    zIndex: 7000
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -84,7 +84,7 @@ export const AppMenuBar = () => {
               <ListItemAvatar>
                 <Avatar><WebAsset/></Avatar>
               </ListItemAvatar>
-              <ListItemText primary={'Page #4'} secondary={'Card, Accordions, Dialogs'}/>
+              <ListItemText primary={'Page #4'} secondary={'Card, Accordions, Dialogs, Snackbar'}/>
             </ListItem>
           </Link>
 
@@ -93,7 +93,16 @@ export const AppMenuBar = () => {
               <ListItemAvatar>
                 <Avatar><WebAsset/></Avatar>
               </ListItemAvatar>
-              <ListItemText primary={'Page #5'} secondary={'Tabs, Progress bar/circle'}/>
+              <ListItemText primary={'Page #5'} secondary={'Tabs, Progress bar/circle, Backdrop'}/>
+            </ListItem>
+          </Link>
+
+          <Link href={'/p6'}>
+            <ListItem button key={'page6'}>
+              <ListItemAvatar>
+                <Avatar><WebAsset/></Avatar>
+              </ListItemAvatar>
+              <ListItemText primary={'Page #6'} secondary={'Avatar, '}/>
             </ListItem>
           </Link>
 

@@ -9,6 +9,7 @@ import {Page2} from "./Page2";
 import {Page3} from "./Page3";
 import {Page4} from './Page4';
 import {Page5} from './Page5';
+import {Page6} from './Page6';
 
 export default () => {
   return (
@@ -33,6 +34,9 @@ export default () => {
           </Route>
           <Route path='/p5'>
             <Page5/>
+          </Route>
+          <Route path='/p6'>
+            <Page6/>
           </Route>
         </Switch>
       </div>

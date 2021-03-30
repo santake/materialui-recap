@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, makeStyles, Typography} from "@material-ui/core";
+import {Box, Container, makeStyles, Typography} from "@material-ui/core";
 import {SimpleDialogDemo} from "./SimpleDialogDemo";
 import {AlertDialogDemo} from './AlertDialogDemo';
 import {FormDialogDemo} from "./FormDialogDemo";
@@ -18,15 +18,39 @@ export const Dialogs = () => {
       <Container maxWidth={'md'}>
         <Typography variant={'h4'}>Dialogs</Typography>
 
-        <SimpleDialogDemo/>
+        <Box display={'flex'}
+             flexDirection={'row'}
+             flexWrap={'wrap'}
+             justifyContent={'flex-start'}
+             alignItems={'flex-start'}
+             alignContent={'flex-start'}>
+          <Box>
+            <SimpleDialogDemo/>
+          </Box>
+          <Box>
+            <AlertDialogDemo/>
+          </Box>
+          <Box>
+            <FormDialogDemo/>
+          </Box>
+          <Box>
+            <CustomizedDialogDemo/>
+          </Box>
+          <Box>
+            <ScrollableDialogDemo/>
+          </Box>
+        </Box>
 
-        <AlertDialogDemo/>
 
-        <FormDialogDemo/>
 
-        <CustomizedDialogDemo/>
 
-        <ScrollableDialogDemo/>
+
+
+
+
+
+
+
       </Container>
     </div>
   );
