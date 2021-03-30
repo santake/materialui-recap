@@ -15,6 +15,10 @@ import {
 import {ListAlt, Menu as MenuIcon, WebAsset} from "@material-ui/icons"
 
 const useStyles = makeStyles((theme) => ({
+  appmenubar: {
+    // Increase the Vertical index to the top
+    zIndex: 9000
+  },
   menuButton: {
     marginRight: theme.spacing(2)
   },
@@ -54,7 +58,7 @@ export const AppMenuBar = () => {
               <ListItemAvatar>
                 <Avatar><WebAsset/></Avatar>
               </ListItemAvatar>
-              <ListItemText primary={'Page #1'} secondary={'Fundamental components'}/>
+              <ListItemText primary={'Page #1'} secondary={'Layout (e.g. Grid, Flex Box)'}/>
             </ListItem>
           </Link>
 
@@ -63,7 +67,7 @@ export const AppMenuBar = () => {
               <ListItemAvatar>
                 <Avatar><ListAlt/></Avatar>
               </ListItemAvatar>
-              <ListItemText primary={'Page #2'} secondary={'Form items'}/>
+              <ListItemText primary={'Page #2'} secondary={'Various Form components'}/>
             </ListItem>
           </Link>
           <Link href={'/p3'}>
@@ -71,7 +75,7 @@ export const AppMenuBar = () => {
               <ListItemAvatar>
                 <Avatar><WebAsset/></Avatar>
               </ListItemAvatar>
-              <ListItemText primary={'Page #3'} secondary={'Various useful components (1)'}/>
+              <ListItemText primary={'Page #3'} secondary={'Drawer, Menu, Stepper, Toolbar, Paper'}/>
             </ListItem>
           </Link>
 
@@ -80,7 +84,7 @@ export const AppMenuBar = () => {
               <ListItemAvatar>
                 <Avatar><WebAsset/></Avatar>
               </ListItemAvatar>
-              <ListItemText primary={'Page #4'} secondary={'Various useful components (2)'}/>
+              <ListItemText primary={'Page #4'} secondary={'Card, Accordions, Dialogs'}/>
             </ListItem>
           </Link>
 
@@ -89,7 +93,7 @@ export const AppMenuBar = () => {
               <ListItemAvatar>
                 <Avatar><WebAsset/></Avatar>
               </ListItemAvatar>
-              <ListItemText primary={'Page #5'} secondary={'Tab examples'}/>
+              <ListItemText primary={'Page #5'} secondary={'Tabs, Progress bar/circle'}/>
             </ListItem>
           </Link>
 
@@ -99,7 +103,10 @@ export const AppMenuBar = () => {
   };
 
   return (
-    <AppBar position={'sticky'} color={'primary'} elevation={0}>
+    <AppBar position={'sticky'}
+            color={'primary'}
+            elevation={1}
+            className={classes.appmenubar}  >
       <Toolbar variant={'dense'}>
         <IconButton edge={'start'}
                     className={classes.menuButton}

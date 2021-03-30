@@ -5,6 +5,7 @@ import {Steppers} from "./Steppers";
 import {Menubars} from "./Menubars";
 import {Papers} from './Papers';
 
+
 export const Page3 = () => {
   return (
     <>
