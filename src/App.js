@@ -10,10 +10,13 @@ import {Page3} from "./Page3";
 import {Page4} from './Page4';
 import {Page5} from './Page5';
 import {Page6} from './Page6';
+import {CssBaseline} from "@material-ui/core";
 
 export default () => {
   return (
     <>
+      {/* CssBaseLine is for unified display for all browsers */}
+      <CssBaseline/>
       <AppMenuBar/>
       <div>
         <Switch>

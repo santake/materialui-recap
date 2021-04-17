@@ -58,7 +58,7 @@ export const AppMenuBar = () => {
               <ListItemAvatar>
                 <Avatar><WebAsset/></Avatar>
               </ListItemAvatar>
-              <ListItemText primary={'Page #1'} secondary={'Layout (e.g. Grid, Flex Box)'}/>
+              <ListItemText primary={'Page #1'} secondary={'Layout (e.g. Grid, Flex Box, Typography)'}/>
             </ListItem>
           </Link>
 
